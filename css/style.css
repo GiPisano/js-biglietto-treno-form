@@ -1,0 +1,49 @@
+
+
+body{
+background-color: rgb(2, 2, 72);
+}
+
+.container-form * {
+    font-size: 10px;
+}
+
+.container-form,
+.ticket-container{
+    background-color: aliceblue;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 20px 20px 50px 15px grey;;
+}
+
+.ticket-container{
+    display: none;
+}
+
+.title{
+    text-align: center;
+    color: white;
+}
+
+.text-name{
+    font-size: 10px;
+    color: white;
+}
+
+.container-name{
+    background-color: lightslategray;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: bolder;
+}
+
+.table-ticket{
+    font-size: 8px;
+    margin: 0 auto;
+}
+
+.ticket-title{
+    display: none;
+}
