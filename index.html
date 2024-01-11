@@ -14,82 +14,83 @@
 </head>
 
 <body>
-    <h3 class="title">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
-    <div class="container-form">
-        <form>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <div class="name">
-                            <label for="user-name">Nome Cognome</label>
-                            <input type="text" id="user-name">
+    <div class="container">
+        <h3 class="title">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h3>
+        <div class="container-form">
+            <form>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="name">
+                                <label for="user-name">Nome Cognome</label>
+                                <input type="text" id="user-name">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="distance">
+                                <label for="user-km">km da percorrere</label>
+                                <input type="number" id="user-km">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="age-range">
+                                <label for="user-age">Fascia d'età</label>
+                                <select id="user-age">
+                                    <option value="adult" id="adult">Maggiorenne</option>
+                                    <option value="underage" id="underage">Minorenne</option>
+                                    <option value="overage" id="overage">Over 65</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="distance">
-                            <label for="user-km">km da percorrere</label>
-                            <input type="number" id="user-km">
+
+                    <div class="row my-3">
+                        <div class="col text-end">
+                            <div>
+                                <button class="btn btn-outline-success" type="button" id="button-result">Genera</button>
+                            </div>
+                        </div>
+                        <div class="col text-start">
+                            <div>
+                                <button class="btn btn-outline-warning" type="reset" id="button-reset">Annulla</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="age-range">
-                            <label for="user-age">Fascia d'età</label>
-                            <select id="user-age">
-                                <option value="adult" id="adult">Maggiorenne</option>
-                                <option value="underage" id="underage">Minorenne</option>
-                                <option value="overage" id="overage">Over 65</option>
-                            </select>
-                        </div>
-                    </div>
+                    <p class="banner"></p>
                 </div>
-
-                <div class="row my-3">
-                    <div class="col text-end">
-                        <div>
-                            <button class="btn btn-outline-success" type="button" id="button-result">Genera</button>
-                        </div>
-                    </div>
-                    <div class="col text-start">
-                        <div>
-                            <button class="btn btn-outline-warning" type="reset" id="button-reset">Annulla</button>
-                        </div>
-                    </div>
-                </div>
-                <p class="banner"></p>
-            </div>
-        </form>
-    </div>
-
-    <div>
-        <h3 class="title ticket-title">IL TUO BIGLIETTO</h3>
-        <div class="ticket-container">
-            <div class="container-name">
-                <h6>Nome Passeggero</h6>
-                <p id="text-name"></p>
-            </div>
-
-            <table class="table table-borderless table-ticket">
-                <thead>
-                    <tr>
-                        <th scope="col">Offerta</th>
-                        <th scope="col">Carrozza</th>
-                        <th scope="col">Codice CP</th>
-                        <th scope="col">Costo biglietto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row">Biglietto Standard</td>
-                        <td id="carriage-number"></td>
-                        <td id="codice-cp"></td>
-                        <td id="ticket-price"></td>
-                    </tr>
-
-                </tbody>
-            </table>
+            </form>
         </div>
 
+        <div>
+            <h3 class="title ticket-title">IL TUO BIGLIETTO</h3>
+            <div class="ticket-container">
+                <div class="container-name">
+                    <h6>Nome Passeggero</h6>
+                    <p id="text-name"></p>
+                </div>
 
+                <table class="table table-borderless table-ticket">
+                    <thead>
+                        <tr>
+                            <th scope="col">Offerta</th>
+                            <th scope="col">Carrozza</th>
+                            <th scope="col">Codice CP</th>
+                            <th scope="col">Costo biglietto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">Biglietto Standard</td>
+                            <td id="carriage-number"></td>
+                            <td id="codice-cp"></td>
+                            <td id="ticket-price"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
