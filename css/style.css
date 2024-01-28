@@ -4,10 +4,6 @@ body{
 background-color: rgb(2, 2, 72);
 }
 
-.container-form * {
-    font-size: 10px;
-}
-
 .container-form,
 .ticket-container{
     background-color: aliceblue;
@@ -35,12 +31,12 @@ background-color: rgb(2, 2, 72);
     background-color: lightslategray;
     padding: 0 5px;
     text-align: center;
-    font-size: 8px;
+    font-size: 15px;
     font-weight: bolder;
 }
 
 .table-ticket{
-    font-size: 8px;
+    font-size: 15px;
     margin: 0 auto;
 }
 

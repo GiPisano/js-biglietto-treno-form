@@ -10,6 +10,7 @@ const cpCode = document.getElementById('codice-cp');
 const ticketTitle = document.querySelector('.ticket-title')
 const ticket = document.querySelector('.ticket-container');
 const bannerTitle = document.querySelector('.banner');
+const offer = document.querySelector('.offer')
 
 const price = 0.21;
 
@@ -38,6 +39,7 @@ console.log(overAgePrice);
 
 btnResult.addEventListener('click', function(){
 
+    bannerTitle.innerText = '';
     let km = parseInt(userKm.value);
     let age = userAge.value;
 
@@ -45,33 +47,35 @@ btnResult.addEventListener('click', function(){
 
         ticket.style.display = "flex";
         ticketTitle.style.display = "block"
+
         textName.innerText = userName.value;
         carriageNumber.innerText = Math.floor(Math.random() * 10) +1;
-        cpCode.innerText = Math.floor(Math.random() * 100000) + 1;;
+        cpCode.innerText = Math.floor(Math.random() * (999999 - 100000) ) + 100000;
+        
 
         let underAgeCost = underAgePrice * km;
         let overAgeCost = overAgePrice * km;
         let ticketPriceCost = price * km;
 
         if(age == 'underage'){
-            ticketPrice.innerText = underAgeCost.toFixed(2) + '€'
+            ticketPrice.innerText = underAgeCost.toFixed(2) + '€';
+            offer.innerText = 'Sconto minorenne'
             console.log(underAgeCost)
         } else if(age == 'overage'){
             ticketPrice.innerText = overAgeCost.toFixed(2) + '€'
+            offer.innerText = 'Sconto over 65'
             console.log(overAgeCost)
         }else{
             ticketPrice.innerText = ticketPriceCost.toFixed(2) + '€'
-            console.log(tiketPriceCost)
+            offer.innerText = 'Biglietto Standard'
+            console.log(ticketPriceCost)
         }
-    
     
     }
     else{
         bannerTitle.innerText = 'I dati inseriti non sono corretti, si prega di riprovare'
         }
     }
-
-   
 )
 
 
